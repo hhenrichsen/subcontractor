@@ -6,13 +6,17 @@ export interface Contract {
     name: string;
     description: string;
     reward: string;
+    claimed: boolean;
+    claimant: string;
 }
 
 const ContractSchema = new Schema({
     message_id: String,
     name: String,
     description: String,
-    reward: String
+    reward: String,
+    claimed: Boolean,
+    claimant: String,
 }, {
     timestamps: true,
 });
